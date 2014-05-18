@@ -190,7 +190,7 @@ int initRamdisk(void)
     inodeArray[0].size = 0;
     inodeArray[0].location[0] = getFreeBlock();
     inodeArray[0].locationCount++;
-    return 1;
+    return 0;
 }
 
 //free the ramdisk
