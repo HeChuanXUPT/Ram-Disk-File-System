@@ -1306,6 +1306,11 @@ int ram_write(int fd, char *address, int num_bytes)
     filePositionAddress = NULL;
     totalBytesWritten = 0;
 
+    if (fdWrite == NULL)
+    {
+        return -1;
+    }
+    
     if (fdWrite->fileDescriptorTable[fd].inodePointer == NULL) 
     {
         return -1;
