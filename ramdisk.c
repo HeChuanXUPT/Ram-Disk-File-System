@@ -1259,6 +1259,7 @@ int ram_read(int fd, char* address, int num_bytes) {
     if (fdRead == NULL) 
     {
         printk("fail to open the file\n");
+        return -1;
     }
     //get inode
     inodePointer = fdRead->fileDescriptorTable[fd].inodePointer;
